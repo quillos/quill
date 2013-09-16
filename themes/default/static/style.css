@@ -1,0 +1,317 @@
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(quicksand.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color: #687c37;
+}
+body {
+    font-family: 'Quicksand', "Oxygen", Arial, "Hiragino Sans GB", 'Microsoft Yahei', '微软雅黑', sans-serif;
+    font-size: 20px;
+    color: #444;
+    height: 100%;
+    position: relative;
+    line-height: 1.6em;
+}
+input, textarea, button {
+    font-family: 'Quicksand', "Oxygen", Arial, "Hiragino Sans GB", 'Microsoft Yahei', '微软雅黑', sans-serif;
+    font-size: 20px;
+}
+#site {
+    position: relative;
+}
+#logo {
+    position: relative;
+    width: 144px;
+    height: 144px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #222;
+}
+#logo * {
+    display: block;
+}
+.people {
+    width: 100px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.girl {
+
+}
+.boy {
+    left: 44px;
+    display: none !important;
+}
+.people i {
+    display: block;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    font-size: 0;
+    border-style: solid;
+    border-color: transparent transparent #687c37 transparent;
+    border-width: 0 20px 40px 20px;
+    margin: 0 auto;
+    position: relative;
+}
+.people i.h {
+    border-width: 0 25px 45px;
+    margin: 0 auto;
+}
+.people i.b {
+    margin-top: -20px;
+    border-width: 0 35px 55px;  
+}
+.people i.l {
+    margin-top: -25px;
+    border-width: 0 35px 50px;  
+}
+.people i.f {
+    border-color: #509e9d;
+    border-width: 0 8px 10px;  
+}
+.boy i {
+    border-bottom-color: #509e9d;
+}
+.girl i {
+    border-bottom-color: #DC5038;
+}
+.girl i.h {
+    border-width: 0 28px 32px;
+    margin: 0 auto;
+    margin-top: 17px;
+}
+.girl i.b {
+    margin-top: -22px;
+    border-width: 0 29px 38px;  
+}
+.girl i.l {
+    border-width: 0 28px 41px;  
+}
+
+.girl i.f {
+    border-width: 0 3px 8px;
+    border-color: #DC5038;
+}
+#logo {
+    display: none;
+}
+.people i {
+    border-bottom-color: #509e9d;
+}
+.people i.f {
+    border-color: #509e9d;
+}
+#header {
+    color: #687c37;
+    padding: 0;
+    width: 15%;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    background: #ededed;
+}
+#branding {
+    position: relative;
+}
+#branding img {
+    width: 100px;
+    display: block;
+    margin: 3em auto 1em;
+}
+#branding span {
+    font-size: 32px;
+    font-weight: 500;
+    display: block;
+    line-height: 76px;
+    text-align: center;
+    background: #fff;
+}
+#content, #footer {
+    margin-left: 15%;
+    padding-left: 5%;
+    margin-right: 5%;
+    padding-top: 2em;
+}
+#footer {
+    border-top: 1px solid #ededed;
+    padding: 2em 0;
+    margin: 2em 5% 0 20%;
+    font-size: .8em;
+    color: #666;
+}
+#nav {
+    margin-top: 1.5em;
+}
+#nav li {
+    line-height: 44px;
+    text-align: center;
+}
+#nav li a {
+    color: #555;
+    text-decoration: none;
+}
+:focus {
+    border: 1px solid #687c37;
+}
+input,textarea {
+    border: 1px solid #ededed;
+    outline: 0;
+}
+input {
+    height: 32px;
+    width: 500px;
+}
+textarea {
+    width: 500px;
+    height: 300px;
+}
+button {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    text-align: center;
+    color: #687c37;
+    background: #ededed;
+}
+.content-header {
+    padding: 2em 0;
+    font-size: 1em;
+    color: #666;
+    position: relative;
+}
+.controls {
+    position: absolute;
+    right: 5%;
+    top: 0;
+    line-height: 3em;
+}
+body.post {
+    padding: 0;
+    border: 0;
+}
+.post {
+    padding: 1em 0;
+    border-bottom: 1px solid #ededed;
+}
+.not-found {
+    min-height: 10em;
+}
+.post-header {
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+.post-title {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+.post-title:after {
+    content:' ';
+    display: block;
+    clear: both;
+}
+.post-meta {
+    line-height: 54px;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    float: left;
+}
+.post-meta a {
+    background: #ededed;
+    
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 2em;
+    vertical-align: middle;
+}
+.post .post-title a {
+    line-height: 31px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.post p {
+    margin-bottom: 1.6em;
+}
+.post:last-child {
+    border-bottom: 0;
+}
+.login #header {
+    position: relative;
+    width: auto;
+    height: auto;
+    border-right: 0;
+}
+.login #content {
+    margin: 0;
+    padding: 0;
+    padding-top: 3em;
+}
+.login #footer {
+    border-top: 0;
+    margin: 2em 0;
+    text-align: center;
+}
+.login form {
+    width: 20%;
+    position: relative;
+    margin: 0 auto;
+}
+.login p {
+    margin-bottom: .6em;
+    margin-left: -1px;
+}
+.login label {
+    display: none;
+}
+.login input {
+    width: 96%;
+    padding: 0 2%;
+    font-size: 16px;
+}
+.login button {
+    font-size: 16px;
+    width: 100%;
+    display: block;
+}
+.login form a {
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    padding: 6px 0;
+}
+.compose form {
+    padding-top: 2em;
+}
+.compose label {
+    display: none;
+}
+.compose p {
+    margin-bottom: .6em;
+}
+.compose #title {
+    height: 66px;
+    padding: 0 1.5%;
+}
+.compose #content {
+}
+.compose input,
+.compose textarea {
+    width: 96%;
+}

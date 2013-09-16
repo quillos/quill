@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{{ __('Home') }}{% endblock %}
+
+{% block content %}
+    
+    {% for post in posts %}
+
+    {% include 'content.html' %}
+
+    {% endfor %}
+
+{% endblock %}

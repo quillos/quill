@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ __('New Post') }}{% endblock %}
+
+{% block content %}
+    <form class="compose" action="{{ site_url('compose') }}" method="POST">
+        <p>
+            <label for="_title">{{ __('Title') }}</label>
+            <input type="text" name="title" id="_title" value="{{ post.title|e }}">
+        </p>
+        <p>
+            <label for="_slug">{{ __('Slug') }}</label>
+            <input type="text" name="slug" id="_slug" value="{{ post.slug|e }}">
+        </p>
+        <p>
+            <label for="_content">{{ __('Content') }}</label>
+            <textarea cols="10" name="content" id="_content">{{ post.content|e }}</textarea>
+        </p>
+        <p>
+            <input type="hidden" name="id" value="{{ post.id|e }}">
+            <button type="submit">{{ __('Submit') }}</button>
+        </p>
+    </form>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <link rel="stylesheet" href="{{ theme_url('style.css') }}">
+            <link rel="stylesheet" href="{{ theme_url('theme.js') }}">
+            <title>{% block title %}{% endblock %} - {{ blog.name }}</title>
+        {% endblock %}
+    </head>
+    <body {{ body_class() }}>
+        <div id="site">
+            <div id="header">
+                <div id="branding">
+                    <a href="{{ site_url() }}"><img src="{{ asset_url('logo.png') }}" class="logo"></a>
+                    <span>{{ blog.name }}</span>
+                </div>
+                <div id="nav">
+                    <ul>
+                        <li><a href="{{ site_url('about') }}">{{ __('About') }}</a></li>
+                        <li><a href="{{ site_url('docs') }}">{{ __('Docs') }}</a></li>
+                        <li><a href="{{ site_url('extends') }}">{{ __('Extends') }}</a></li>
+                        <li><a href="{{ site_url('themes') }}">{{ __('Themes') }}</a></li>
+                        <li><a href="{{ site_url('forum') }}">{{ __('Forum') }}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                <div class="controls">
+                {% if current_user %}
+                    <a href="{{ site_url('admin/post/new') }}">{{ __('New') }}</a> 
+                    <span>/</span> 
+                    <a href="{{ site_url('logout') }}">{{ __('Logout') }}</a>
+                {% else %}
+                    <a href="{{ site_url('login') }}">{{ __('Login') }}</a>
+                {% endif %}
+                </div>
+                {% block content %}{% endblock %}
+            </div>
+            <div id="footer">
+                {% block footer %}
+                    &copy; Copyright 2013 <a href="http://quillos.org/">Quill</a> | 
+                    <a href="https://github.com/quillos/quill">Github</a>.
+                    <br>
+                    {{ r() }}, {{ runtime() }}, {{ memory_usage() }}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

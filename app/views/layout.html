@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <link rel="stylesheet" href="{{ asset_url('app.css') }}">
+            <link rel="stylesheet" href="{{ asset_url('app.js') }}">
+            <title>{% block title %}{% endblock %} - {{ blog.name }}</title>
+        {% endblock %}
+    </head>
+    <body {{ body_class() }}>
+        <div id="site">
+            <div id="header">
+                <div id="branding">
+                    <a href="{{ site_url() }}"><img src="{{ asset_url('logo.png') }}" class="logo"></a>
+                    <span>{{ __('Dashboard') }}</span>
+                </div>
+                <div id="nav">
+                    <ul>
+                        <li><a href="{{ site_url('admin') }}">{{ __('Dashboard') }}</a></li>
+                        <li><a href="{{ site_url('admin/post/new') }}">{{ __('New') }}</a></li>
+                        <li><a href="{{ site_url('admin/extends') }}">{{ __('Extends') }}</a></li>
+                        <li><a href="{{ site_url('admin/themes') }}">{{ __('Themes') }}</a></li>
+                        <li><a href="{{ site_url('admin/settings') }}">{{ __('Settings') }}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+            <div id="footer">
+                {% block footer %}
+                    &copy; Copyright 2013 <a href="http://niluy.org/">niluy</a> | 
+                    <a href="https://github.com/niluy/niluy">Github</a>.
+                    <br>
+                    {{ runtime() }}, {{ memory_usage() }}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<div id="comments">
+    <div id="respond">
+        <h2>Reply</h2>
+        <form action="{{ site_url('comment/add') }}" method="POST">
+            <input type="hidden" name="post_id" value="{{ post.id }}">
+            <p>
+                <label>Name</label>
+                <input type="text" name="name">
+            </p>
+            <p>
+                <label>Email</label>
+                <input type="text" name="email">
+            </p>
+            <p>
+                <label>Url</label>
+                <input type="text" name="url">
+            </p>
+            <p>
+                <label>Comment</label>
+                <textarea name="content"></textarea>
+            </p>
+            <p>
+                <button type="submit">Publish</button>
+            </p>
+        </form>
+    </div>
+    <div id="commentlist">
+        <h2>Comment List</h2>
+        {% for comment in comments %}
+        <div class="comment">
+            <h3>
+                <a href="{{ comment.author.url }}">{{ comment.author.name }}</a>
+                <a href="{{ comment.author.url }}">{{ comment.author.avatar }}</a>
+                <small class="comment-date">{{ comment.date|rdate }}</small>
+            </h3>
+            <div class="comment-content">{{ comment.html }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

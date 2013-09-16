@@ -1,0 +1,25 @@
+<?php
+
+return array(
+    'Arr' => 'Quill\\Arr',
+    'Autoloader' => 'Quill\\Autoloader',
+    'Config' => 'Quill\\Config',
+    'Cookie' => 'Quill\\Cookie',
+    'DB' => 'Quill\\Database',
+    'Error' => 'Quill\\Error',
+    'Filter' => 'Quill\\Filter',
+    'Input' => 'Quill\\Input',
+    'Query' => 'Quill\\Database\\Query',
+    'Request' => 'Quill\\Request',
+    'Response' => 'Quill\\Response',
+    'Redirect' => 'Quill\\Redirect',
+    'Route' => 'Quill\\Route',
+    'Router' => 'Quill\\Router',
+    'Session' => 'Quill\\Session',
+    'View' => 'Quill\\View',
+    'Model' => 'Quill\\Model',
+    'Auth' => 'Quill\\Auth',
+    'Module' => 'Quill\\Module',
+    'I18n' => 'Quill\\I18n',
+    'UI' => 'Quill\\UI',
+);
